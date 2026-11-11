@@ -23,3 +23,4 @@ Do not overwrite your teammate's files. Merge her pages with these files and kee
 
 ## Important limitation
 This is a static front-end assignment. Login and registration validation run in the browser only. There is no database, real authentication, or secure account creation.
+Project documentation updated by Jomanah.
