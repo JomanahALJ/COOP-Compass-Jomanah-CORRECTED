@@ -1,0 +1,10 @@
+CPIS-358 Assignment #1
+Project Solution — COOP Compass
+
+COOP Compass is a university internship preparation website designed to help students explore possible career fields and prepare for cooperative training. The website presents information about career options and provides practical guidance that students can use before applying for internships.
+
+Jomanah's assigned contribution includes the Login and Sign-up pages. The Login page contains university email and password fields, a remember-me option, and a link to the registration page. The Sign-up page collects the student's full name, university email, student ID, major, password, and password confirmation.
+
+The forms use JavaScript validation to check required fields, email format, student ID format, minimum password length, and matching passwords. Functions and event listeners respond to form submissions and user input. A loop checks required fields, while conditional statements display appropriate validation messages. The pages use an external CSS stylesheet with reusable classes, borders, shadows, responsive layout rules, and z-index layering.
+
+The current implementation is a front-end demonstration only. It does not connect to a database or provide real authentication. The final shared report should include the complete deployed website URL, the GitHub repository URL, and genuine screenshots of each group member's GitHub contribution calendar after the group has made its commits.

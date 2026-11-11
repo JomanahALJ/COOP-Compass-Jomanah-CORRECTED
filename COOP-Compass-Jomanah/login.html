@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | COOP Compass</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">COOP <span>Compass</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a class="active" href="login.html">Login</a>
+      <a class="nav-cta" href="signup.html">Create Account</a>
+    </nav>
+  </header>
+
+  <main class="auth-layout">
+    <section class="auth-intro">
+      <p class="eyebrow">YOUR NEXT STEP STARTS HERE</p>
+      <h1>Welcome back to your career journey.</h1>
+      <p>Sign in to continue exploring internship fields and preparing for your cooperative training.</p>
+      <div class="info-card">
+        <strong>COOP Compass</strong>
+        <span>Explore your options. Prepare with confidence.</span>
+      </div>
+    </section>
+
+    <section class="form-card" aria-labelledby="login-title">
+      <h2 id="login-title">Login</h2>
+      <p class="muted">Enter your university email and password.</p>
+      <form id="loginForm" novalidate>
+        <div class="form-group">
+          <label for="loginEmail">University email</label>
+          <input type="email" id="loginEmail" name="email" placeholder="name@stu.kau.edu.sa" autocomplete="username" required>
+          <small class="field-error" id="loginEmailError"></small>
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password" placeholder="Enter your password" autocomplete="current-password" required>
+          <small class="field-error" id="loginPasswordError"></small>
+        </div>
+        <div class="form-options">
+          <label class="check-label"><input type="checkbox" id="rememberMe"> Remember me</label>
+          <a href="#login-help" id="forgotLink">Forgot password?</a>
+        </div>
+        <button class="primary-button" type="submit">Login</button>
+        <p class="form-message" id="loginMessage" role="status" aria-live="polite"></p>
+      </form>
+      <p class="switch-auth">New to COOP Compass? <a href="signup.html">Create an account</a></p>
+      <p class="demo-note" id="login-help">Demo project: this form checks the entered fields only. It does not connect to a real account or server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 COOP Compass · University Internship Preparation</footer>
+</body>
+</html>

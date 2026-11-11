@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up | COOP Compass</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">COOP <span>Compass</span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="login.html">Login</a>
+      <a class="nav-cta active" href="signup.html">Create Account</a>
+    </nav>
+  </header>
+
+  <main class="auth-layout signup-layout">
+    <section class="auth-intro">
+      <p class="eyebrow">GET READY FOR YOUR COOP</p>
+      <h1>Build your next opportunity.</h1>
+      <p>Create a student profile to start exploring career fields and preparing for internship applications.</p>
+      <ul class="benefit-list">
+        <li>Explore different career paths</li>
+        <li>Understand skills needed for each field</li>
+        <li>Organize your preparation checklist</li>
+      </ul>
+    </section>
+
+    <section class="form-card" aria-labelledby="signup-title">
+      <h2 id="signup-title">Create your account</h2>
+      <p class="muted">Fill in your student information.</p>
+      <form id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" placeholder="Your full name" autocomplete="name" required>
+          <small class="field-error" id="fullNameError"></small>
+        </div>
+        <div class="form-group">
+          <label for="studentEmail">University email</label>
+          <input type="email" id="studentEmail" name="email" placeholder="name@stu.kau.edu.sa" autocomplete="email" required>
+          <small class="field-error" id="studentEmailError"></small>
+        </div>
+        <div class="form-group">
+          <label for="studentId">Student ID</label>
+          <input type="text" id="studentId" name="studentId" placeholder="Enter your student ID" inputmode="numeric" required>
+          <small class="field-error" id="studentIdError"></small>
+        </div>
+        <div class="form-group">
+          <label for="major">Major</label>
+          <select id="major" name="major" required>
+            <option value="">Choose your major</option>
+            <option>Information Systems</option>
+            <option>Computer Science</option>
+            <option>Information Technology</option>
+            <option>Cybersecurity</option>
+            <option>Other</option>
+          </select>
+          <small class="field-error" id="majorError"></small>
+        </div>
+        <div class="form-group">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="password" placeholder="At least 8 characters" autocomplete="new-password" required>
+          <small class="field-error" id="signupPasswordError"></small>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm password</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Enter your password again" autocomplete="new-password" required>
+          <small class="field-error" id="confirmPasswordError"></small>
+        </div>
+        <button class="primary-button" type="submit">Create Account</button>
+        <p class="form-message" id="signupMessage" role="status" aria-live="polite"></p>
+      </form>
+      <p class="switch-auth">Already registered? <a href="login.html">Login</a></p>
+      <p class="demo-note">Demo project: information is validated in your browser only. No real account is created and no data is sent to a server.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">© 2026 COOP Compass · University Internship Preparation</footer>
+</body>
+</html>
