@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | COOP Compass</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #18334b;
+    background: #edf3f6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #18334b;
+}
+
+.logo span {
+    color: #438e89;
+}
+
+nav a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: #438e89;
+    font-size: 14px;
+}
+
+.button {
+    display: inline-block;
+    background: #18334b;
+    color: white;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+p, li {
+    color: #607484;
+    line-height: 1.7;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #18334b12;
+    margin-top: 25px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #dce5eb;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background: #18334b;
+    color: white;
+}
+
+td {
+    color: #607484;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    color: #607484;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <a class="logo" href="index.html">
+        COOP <span>Compass</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="login.html">Login</a>
+        <a class="button" href="signup.html">
+            Create Account
+        </a>
+    </nav>
+
+</header>
+
+<main>
+
+    <p style="color: #438e89; font-size: 12px; font-weight: bold; letter-spacing: 2px;">
+        GET TO KNOW US
+    </p>
+
+    <h1>About COOP Compass</h1>
+
+    <p>
+        COOP Compass is a website designed to help
+        university students explore cooperative training
+        opportunities and prepare for their future careers.
+    </p>
+
+    <section class="card">
+
+        <h2>Our Goal</h2>
+
+        <p>
+            We aim to make training preparation easier
+            by providing useful information in a simple
+            and organized place.
+        </p>
+
+        <h3>What we help students do</h3>
+
+        <ul>
+            <li>Explore different career paths.</li>
+            <li>Understand the skills needed for each field.</li>
+            <li>Organize their training preparation.</li>
+        </ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Explore Career Fields</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Career Field</th>
+                    <th>Useful Skills</th>
+                </tr>
+            </thead>
+
+            <tbody id="careerTable"></tbody>
+
+        </table>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Why COOP Compass?</h2>
+
+        <button class="button" id="moreButton"
+                onclick="showDetails()">
+            Read More
+        </button>
+
+        <p id="details"></p>
+
+    </section>
+
+</main>
+
+<footer>
+    COOP Compass | Prepare with confidence.
+</footer>
+
+<script>
+
+var fields = [
+    "Data Analysis",
+    "Web Development",
+    "Business Analysis",
+    "UI/UX Design"
+];
+
+var skills = [
+    "Excel, SQL",
+    "HTML, CSS, JavaScript",
+    "Requirements analysis, communication",
+    "Figma, prototyping"
+];
+
+for (var i = 0; i < fields.length; i++) {
+
+    var row =
+        document.getElementById("careerTable").insertRow();
+
+    row.insertCell(0).textContent = fields[i];
+
+    row.insertCell(1).textContent = skills[i];
+}
+
+function showDetails() {
+
+    var details = document.getElementById("details");
+
+    var button = document.getElementById("moreButton");
+
+    if (details.textContent === "") {
+
+        details.textContent =
+            "COOP Compass brings career exploration and training preparation together to help students take their next step with confidence.";
+
+        button.textContent = "Read Less";
+
+    } else {
+
+        details.textContent = "";
+
+        button.textContent = "Read More";
+    }
+}
+
+</script>
+
+</body>
+</html>
