@@ -1,0 +1,280 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home | COOP Compass</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #18334b;
+    background: #edf3f6;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
+    padding: 18px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #18334b;
+}
+
+.logo span {
+    color: #438e89;
+}
+
+nav a {
+    margin-left: 18px;
+    text-decoration: none;
+    color: #438e89;
+    font-size: 14px;
+}
+
+.button {
+    display: inline-block;
+    background: #18334b;
+    color: white;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 7px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+main {
+    max-width: 1050px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.intro {
+    flex: 1;
+    min-width: 250px;
+}
+
+h1 {
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+p, li {
+    color: #607484;
+    line-height: 1.7;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px #18334b12;
+}
+
+.visual {
+    width: 360px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.visual img {
+    width: 100%;
+    display: block;
+}
+
+section {
+    margin-top: 35px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: white;
+    color: #607484;
+}
+
+.map-box {
+    overflow-x: auto;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <a class="logo" href="index.html">
+        COOP <span>Compass</span>
+    </a>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="login.html">Login</a>
+        <a class="button" href="signup.html">
+            Create Account
+        </a>
+    </nav>
+</header>
+
+<main>
+
+    <div class="hero">
+
+        <div class="intro">
+
+            <p style="color: #438e89; font-size: 12px; font-weight: bold; letter-spacing: 2px;">
+                YOUR NEXT STEP STARTS HERE
+            </p>
+
+            <h1>Find your direction.<br>Build your future.</h1>
+
+            <p>
+                Explore career fields and prepare for your
+                cooperative training with COOP Compass.
+            </p>
+
+            <a class="button" href="signup.html">
+                Get Started
+            </a>
+
+        </div>
+
+        <div class="card visual">
+
+            <img id="careerImage" src="explore.svg"
+                 alt="Explore career paths">
+
+            <h2 id="careerTitle">Explore career paths</h2>
+
+            <p id="careerText">
+                Discover different fields before choosing
+                your training direction.
+            </p>
+
+            <button class="button" onclick="nextTip()">
+                Next Tip
+            </button>
+
+        </div>
+
+    </div>
+
+    <section class="card">
+
+        <h2>Prepare for your COOP</h2>
+
+        <ul id="steps"></ul>
+
+    </section>
+
+    <section class="card">
+
+        <h2>Learn more about COOP Compass</h2>
+
+        <p>Click the image to visit our About Us page.</p>
+
+        <div class="map-box">
+
+            <img src="about-banner.svg"
+                 alt="Learn about COOP Compass"
+                 width="300" height="100"
+                 usemap="#aboutMap">
+
+            <map name="aboutMap">
+                <area shape="rect"
+                      coords="0,0,300,100"
+                      href="about.html"
+                      alt="About Us">
+            </map>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    COOP Compass | Prepare with confidence.
+</footer>
+
+<script>
+
+var titles = [
+    "Explore career paths",
+    "Build your skills",
+    "Prepare your application"
+];
+
+var descriptions = [
+    "Discover different fields before choosing your training direction.",
+    "Identify the skills needed for your preferred career field.",
+    "Update your CV and get ready to apply for training."
+];
+
+var images = [
+    "explore.svg",
+    "skills.svg",
+    "prepare.svg"
+];
+
+var current = 0;
+
+function nextTip() {
+
+    current = (current + 1) % titles.length;
+
+    document.getElementById("careerTitle").textContent =
+        titles[current];
+
+    document.getElementById("careerText").textContent =
+        descriptions[current];
+
+    document.getElementById("careerImage").src =
+        images[current];
+
+    document.getElementById("careerImage").alt =
+        titles[current];
+}
+
+var steps = [
+    "Explore career fields",
+    "Identify the skills you need",
+    "Prepare your CV",
+    "Search for training opportunities"
+];
+
+for (var i = 0; i < steps.length; i++) {
+
+    var item = document.createElement("li");
+
+    item.textContent = steps[i];
+
+    document.getElementById("steps").appendChild(item);
+}
+
+</script>
+
+</body>
+</html>
