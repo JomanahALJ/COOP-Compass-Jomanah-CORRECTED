@@ -1,0 +1,10 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="310" height="160" viewBox="0 0 310 160">
+    <rect width="310" height="160" rx="12" fill="#edf3f6"/>
+    <circle cx="155" cy="80" r="55" fill="white" stroke="#438e89" stroke-width="3"/>
+    <circle cx="155" cy="80" r="43" fill="none" stroke="#dce5eb" stroke-width="2"/>
+    <text x="155" y="49" text-anchor="middle" font-family="Arial" font-size="12" fill="#18334b">N</text>
+    <polygon points="175,55 163,88 135,105 147,72" fill="#438e89"/>
+    <polygon points="135,105 147,72 163,88" fill="#18334b"/>
+    <circle cx="155" cy="80" r="4" fill="white"/>
+</svg>
